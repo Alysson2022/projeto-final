@@ -1,0 +1,124 @@
+.pagina-login {
+
+    .container-mae{
+        height: 1250px;
+        background-color: #648f4f;
+        
+    }
+    
+    .faixa-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 40em;
+        width: 62em;
+    
+        margin-top: 7em;
+        background-color:#ffff;
+        border-radius: 16px;
+        padding: 90px 50px;
+        margin-left: 11em;
+    }
+    
+    .faixa-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .texto-logo {
+        margin-left: -0.5em;
+        margin-top: 1em;
+    
+        font-family: Georgia;
+    }
+    
+    .logo{
+        margin-top: 30px;
+        margin-left: 65px;
+        width: 210px;
+        height: 190px;
+        border-radius: 9000px;
+    }
+    
+    
+    .faixa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .texto-login{
+        text-align: center;
+        font-family: 'Discord1';
+        font-size: 50px;
+        border-radius: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .texto-email{
+        font-family: Discord1;
+        margin-left: 1em;
+    }
+    
+    .input-email{
+        width: 350px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    
+    .texto-senha{
+        font-family: Discord1;
+        margin-left: 1em;
+    }
+    
+    .input-senha{
+        width: 350px;
+        height: 50px;
+        border-radius: 20px;
+    }
+    
+    .botoes{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    
+        margin-top: 0em;
+    }
+    
+    .botao-esqueci-senha{
+        background-color: #ffff;
+        border-bottom: #ffff;
+        border-color: #ffff;
+        color: #000000;
+    
+        font-family: Discord1;
+    
+        padding-top: 8px;
+        margin-left: 1em;
+        text-decoration: none;
+    }
+    
+    .botao-entrar{
+        text-align: center;
+    
+        font-family: Discord2;
+    
+        background-color: #EBEBEB;
+        border-bottom: #EBEBEB;
+        border-color: #EBEBEB;
+    
+        padding: 12px 20px;
+        border-radius: 25px;
+        margin-top: 2.5em;
+        margin-left: 8em;
+        text-decoration: none;
+        color: #000000;
+    }
+    
+    .senha {
+        margin-top: 1.2em;
+    }
+
+}

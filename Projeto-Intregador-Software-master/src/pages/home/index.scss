@@ -1,0 +1,260 @@
+.pagina-inicial {
+
+    main {
+        background-color: #F89A56;
+        size: 100%;
+    }
+    
+    footer {
+        background-color: #648f4f;
+        padding: 25px px;
+    }
+    
+    p {
+        font-family: 'Discord2';
+        align-items: center;
+        cursor: pointer ;
+        text-decoration-color: #ffff;
+    
+    }
+    
+    
+    h2{
+        font-family: 'Discord5';
+        font-size: 16px;
+        align-items: flex-start;
+        margin-left: 9em;
+    }
+    
+    .texto-areaadm {
+        font-family: 'Discord2';
+        font-size: 19px;
+        margin-right: 0.7em;
+        margin-bottom: 7px;
+        text-align: right;
+        
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .container-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 79em;
+    }
+    
+    .img1 {
+        height: 100px;
+        width: max-content;
+        margin-left: 5em;
+    }
+    
+    .img2 {
+        width: 90px;
+        margin-left: 2.5em;
+        margin-top: -4em;
+      
+    }
+    
+    .fig1 {
+        width: 180px;
+        height: 210px;
+        margin-left: 12px;
+    }
+    
+    .fig2 {
+        width: 200px;
+        height: 180px;
+    }
+    
+    .fig3 {
+        width: 200px ;
+    }
+    
+    .t1 {
+        font-family: 'Discord1';
+        font-size: 25px;
+        margin-top: 1.3em;
+    }
+    
+    .titulo-fazemos {
+        font-family: 'Discord1';
+        font-size: 25px;
+        margin-bottom: 0.4em;
+        text-align: right;
+    }
+    
+    .texto-fazemos {
+        width: 53em;
+        margin-left: 20px;
+    }
+    
+    
+    
+    .pp {
+        font-family: 'Discord3';
+        font-weight: 500;
+        margin-bottom: 25px;
+    }
+    
+    .container {
+        background-color: #ffff;
+        padding: 80px ;
+        margin-top: -4em;
+    }
+
+    .container-principal-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #648f4f;
+
+        height: 25em;
+    }
+    
+    .cont {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    
+    .art {
+        font-family: 'Discord2';
+        margin-left: 7px;
+        margin-top: 0;
+        
+    }
+    
+    .container-texto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        
+    }
+    
+    .container-texto2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    .linha-horizontal {
+        margin-top: 3em;
+    }
+    
+    
+    .container2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+        margin-top: -1em;
+    }
+    
+    .container3 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        
+    }
+    
+    .info {
+        padding: 100px;
+    }
+    
+    
+    .insta {
+        width: 90px;
+        margin-right: 1em;
+    
+    
+    }
+    
+    .face {
+        width: 75px;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        margin-right: 1.3em;
+        align-items: center;
+    
+    }
+    
+    
+    .contato {
+        width: 60px;
+        margin-top: 1em;
+        margin-right: 1.8em;
+    }
+    
+    
+    .d1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .adm {
+        width: 40px;
+        margin-left: 0em;
+        margin-right: 1em;
+    }
+    
+    .canto {
+        margin-left: 50em;
+    }
+    
+    .cera {
+        margin-left: 6.1em;
+        height: max-content;
+        width: 72em;
+    }
+    
+    .hh {
+        font-family: 'Discord2';
+        margin-top: -1em;
+        margin-right: 1.4em;
+        align-items: center;
+    
+    }
+    
+    .hh2 {
+        font-family: 'Discord2';
+        margin-top: -3em;
+        margin-right: 1.5em;
+        align-items: center;
+    
+    }
+    
+    .hh3 {
+        font-family: 'Discord2';
+        margin-top: 0.5em;
+        margin-right: 1em;
+        align-items: center;
+    
+    }
+    
+    .inicio {
+        margin-right: 12em;
+    }
+    
+    .sobre-nos {
+        margin-right: 12em;
+    }
+    
+    .politica {
+        margin-right: 0em;
+    }
+
+
+
+
+
+}
