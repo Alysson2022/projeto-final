@@ -17,7 +17,7 @@ insert INTO TB_ADMINISTRADOR (DS_SENHA, DS_EMAIL)
    
    -- cadastrar produtos
 insert INTO TB_PRODUTO (ID_ADMINISTRADOR, VL_PRECO, QTD_ESTOQUE, DS_CAPACIDADE, DS_CORES, DS_MEDIDAS)
-     values (1, 50.5, '2', '500ml', 'azul', '50cm');
+     values (1, '50.5', 2, '500ml', 'azul', '50cm');
      
 
    -- alterar produto
@@ -29,7 +29,7 @@ insert INTO TB_PRODUTO (ID_ADMINISTRADOR, VL_PRECO, QTD_ESTOQUE, DS_CAPACIDADE, 
        ds_medidas = '40cm'
  where id_produto = 1;
 
-   
+
      
 	-- listar produtos por nome
     select id_produto			id,

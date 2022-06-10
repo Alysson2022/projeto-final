@@ -1,15 +1,16 @@
-import { Login } from '../repository/admRepository.js'
+
+import { cadastrarProduto } from '../repository/produtosRepository.js';
 
 import {Router} from 'express'
 const server = Router();
 
-server.post('/usuario', async (req, resp) => {
+server.post('/produto', async (req, resp) => {
     try {
-        const novofilme = req.body;
+        //const { id,nome, preco, estoque, capacidade, cores, medidas } = req.body;
+        const produto = req.body;
+        const produtoinserido = await cadastrarProduto(produto);
 
-        const filmeinserido = await inserirfilme(novofilme);
-
-        resp.send(filmeinserido)
+        resp.send(produtoinserido)
     } catch (err) {
         resp.send({
             erro: err.message
