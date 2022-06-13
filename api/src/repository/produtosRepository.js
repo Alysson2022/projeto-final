@@ -8,5 +8,4 @@ export async function cadastrarProduto(produto){
   const [resposta] = await con.query(comando, [produto.id, produto.nome, produto.preco, produto.estoque, produto.capacidade, produto.cores, produto.medidas ]) 
   produto.id = resposta.insertId;
   return produto;
-  
 }

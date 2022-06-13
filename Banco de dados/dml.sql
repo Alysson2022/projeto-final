@@ -16,17 +16,18 @@ insert INTO TB_ADMINISTRADOR (DS_SENHA, DS_EMAIL)
    and	ds_senha   = '1234';
    
    -- cadastrar produtos
-insert INTO TB_PRODUTO (ID_ADMINISTRADOR, VL_PRECO, QTD_ESTOQUE, DS_CAPACIDADE, DS_CORES, DS_MEDIDAS)
-     values (1, '50.5', 2, '500ml', 'azul', '50cm');
+insert INTO TB_PRODUTO (ID_ADMINISTRADOR, NM_PRODUTO, VL_PRECO, QTD_ESTOQUE, DS_CAPACIDADE, DS_CORES, DS_MEDIDAS)
+     values (1, 'Xícara', '50.5', 2, '500ml', 'azul', '50cm');
      
 
    -- alterar produto
    update tb_produto 
-   set vl_preco      = '70.5',
-       qtd_estoque    = 3,
-       ds_capacidade  = '550ml',
-       ds_cores = 'vermelho',
-       ds_medidas = '40cm'
+   set  nm_produto    = 'Xícara',
+        vl_preco      = '70.5',
+        qtd_estoque    = 3,
+        ds_capacidade  = '550ml',
+        ds_cores = 'vermelho',
+        ds_medidas = '40cm'
  where id_produto = 1;
 
 

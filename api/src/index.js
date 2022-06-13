@@ -1,7 +1,8 @@
 import 'dotenv/config'
 
 import admController from './controller/admController.js';
-import produtoController from './controller/produtoController.js'
+import produtoController from './controller/produtoController.js';
+import alterarprodutoController from './controller/alterarController.js';
 
 import express from 'express'
 import cors from 'cors'
@@ -14,5 +15,7 @@ server.listen(process.env.PORT, () => console.log(`API esta online na porta ${pr
 // configuracao dos endpoits
 server.use(admController);
 server.use(produtoController);
+server.use(alterarprodutoController);
+
 
 
