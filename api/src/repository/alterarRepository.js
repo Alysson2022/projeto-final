@@ -37,5 +37,5 @@ export async function listarProduto(nome) {
            where id_produto = ?`
 
     const [resposta] = await con.query(comando, [id]);
-    return resposta;
+    return resposta.affectedRows;
 }

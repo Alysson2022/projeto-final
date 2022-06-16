@@ -30,8 +30,10 @@ server.delete('/produto/:id', async (req, resp) => {
     try{
         const { id } = req.params;
         const resposta = await deletarProduto(id);
+        if(resposta != 1)
+            throw new Error ('Produto não pode ser removido.');
 
-        resp.send(resposta);
+        resp.status(200).send();
     } catch(err) {
         resp.status(401).send({
             erro: err.message
