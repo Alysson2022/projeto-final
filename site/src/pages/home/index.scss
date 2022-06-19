@@ -7,7 +7,7 @@
     
     footer {
         background-color: #648f4f;
-        padding: 25px px;
+        padding: 25px;
     }
     
     p {
@@ -74,6 +74,12 @@
     }
     
     .t1 {
+        font-family: 'Discord1';
+        font-size: 25px;
+        margin-top: 1.3em;
+    }
+
+    .t2 {
         font-family: 'Discord1';
         font-size: 25px;
         margin-top: 1.3em;
@@ -254,7 +260,58 @@
     }
 
 
+    @media(max-width: 480px) {
+        .info {
+            width: 100%;
+        }
 
+        .cera {
+            width: 80vh;
+            margin-left: 2.3vh;
+        }
+
+        .container-header {
+            width: 85vh;
+        }
+
+        .img1 {
+            margin-left: 1vh;
+        }
+
+        .container {
+            width: 80%;
+        }
+
+        .linha-horizontal {
+            margin-top: 10vh;
+        }
+
+        .titulo-fazemos {
+            margin-top: -15vh;
+        }
+
+        //CRIAR CLASSE T2 PARA DIFERENCIAR DA TAG T1 (IGUAL A T1)
+        .container .t2 {
+            margin-top: -15vh;
+        }
+
+        .container-principal-footer {
+            height: 60vh;
+            width: 85.5vh;
+        }
+
+        .inicio {
+            margin-right: 4vh;
+        }
+
+        .sobre-nos {
+            margin-right: 4vh;
+        }
+
+        .img2 {
+            margin-left: 1vh;
+        }
+    }
 
 
 }

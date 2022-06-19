@@ -21,7 +21,7 @@ export default function Index () {
 
                 <div class="d1">
 
-                    <a className = 'texto-areaadm' href="../login/login.html"><h3>Área Administrativa</h3> </a>
+                    <a className = 'texto-areaadm' href="../login"><h3>Área Administrativa</h3> </a>
                     <a href="../login"><img className = 'adm' src={Login} alt='img login' /> </a>
 
                 </div>
@@ -63,7 +63,7 @@ export default function Index () {
 
                 <div className = 'container'>
 
-                    <h1 className = 't1'>Qualidade Dos Nossos Produtos!</h1>
+                    <h1 className = 't2'>Qualidade Dos Nossos Produtos!</h1>
 
                     <div className = 'container-texto'>
                         <img className = 'fig3' src={Fig3} alt='Figura 3' />

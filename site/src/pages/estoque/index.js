@@ -25,7 +25,7 @@ export default function Index () {
                     <section class="container-section">
 
                         <div class="titulo-estoque">
-                            <h1>Estoque da <h1 class="titulo-artmaac">ARTMAAC`S</h1> </h1>
+                            <h1>Estoque da <span class="titulo-artmaac">ARTMAAC`S</span> </h1>
                         </div>
 
                         <div class="container-tres-cards">
@@ -36,7 +36,7 @@ export default function Index () {
                             </div>
                             <div class="container-card">
 
-                                <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
+                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
                                 <p>Xicara de chá de porcelana <br/> 
                                     personalizada, 200ml</p>
                                 <p class="paragrafo-estoque">ESTOQUE: 50</p>
@@ -49,50 +49,7 @@ export default function Index () {
 
                             </div>
                             <div class="container-card">
-                                <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container-tres-cards">
-                            <div class="container-card">
-
-                                <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-
-                            </div>
-                            <div class="container-card">
-
-                                <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-
-                            </div>
-                            <div class="container-card">
-                                <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
+                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
                                 <p>Xicara de chá de porcelana <br/> 
                                     personalizada, 200ml</p>
                                 <p class="paragrafo-estoque">ESTOQUE: 50</p>
@@ -108,7 +65,7 @@ export default function Index () {
                         <div class="container-tres-cards">
                             <div class="container-card">
 
-                                <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
+                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
                                 <p>Xicara de chá de porcelana <br/> 
                                     personalizada, 200ml</p>
                                 <p class="paragrafo-estoque">ESTOQUE: 50</p>
@@ -122,7 +79,50 @@ export default function Index () {
                             </div>
                             <div class="container-card">
 
-                                <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
+                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
+                                <p>Xicara de chá de porcelana <br/> 
+                                    personalizada, 200ml</p>
+                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
+                                <p class="paragrafo-preco">R$ 0,00</p>
+
+                                <div class="container-botoes">
+                                    <a class="botao-edicao" href="../registro">Editar</a>
+                                    <a class="botao-excluir" href="../registro">Excluir</a>
+                                </div>
+
+                            </div>
+                            <div class="container-card">
+                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
+                                <p>Xicara de chá de porcelana <br/> 
+                                    personalizada, 200ml</p>
+                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
+                                <p class="paragrafo-preco">R$ 0,00</p>
+
+                                <div class="container-botoes">
+                                    <a class="botao-edicao" href="../registro">Editar</a>
+                                    <a class="botao-excluir" href="../registro">Excluir</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-tres-cards">
+                            <div class="container-card">
+
+                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
+                                <p>Xicara de chá de porcelana <br/> 
+                                    personalizada, 200ml</p>
+                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
+                                <p class="paragrafo-preco">R$ 0,00</p>
+
+                                <div class="container-botoes">
+                                    <a class="botao-edicao" href="../registro">Editar</a>
+                                    <a class="botao-excluir" href="../registro">Excluir</a>
+                                </div>
+
+                            </div>
+                            <div class="container-card">
+
+                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
                                 <p>Xicara de chá de porcelana <br/> 
                                     personalizada, 200ml</p>
                                 <p class="paragrafo-estoque">ESTOQUE: 50</p>
@@ -136,7 +136,7 @@ export default function Index () {
                             </div>
                             <div class="container-card">
                                 
-                            <img src={ Xicara } alt="Xícara" height="120px" width="130px" />
+                            <img className='imagem-produto' src={ Xicara } alt="Xícara" />
                             <p>Xicara de chá de porcelana <br/> 
                                 personalizada, 200ml</p>
                             <p class="paragrafo-estoque">ESTOQUE: 50</p>

@@ -116,9 +116,69 @@
         text-decoration: none;
         color: #000000;
     }
+
+    .botao-entrar:hover {
+        background-color: #dfdfdf;
+        transform: translatey(-3px);
+    }
     
     .senha {
         margin-top: 1.2em;
+    }
+
+    @media(max-width: 480px) {
+        .container-mae {
+            height: 130vh;
+        }
+
+        .logo {
+            height: 15vh;
+            width: 20vh;
+            margin-left: 3vh;
+        }
+
+        .texto-logo {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        .faixa-principal {
+            height: 55vh;
+            width: 56vh;
+            margin-top: 5vh;
+            margin-left: 5vh;
+        }
+
+        img {
+            height: 25vh;
+            width: 30vh;
+            margin-bottom: 10vh;
+        }
+
+        .input-email {
+            height: 6vh;
+            width: 35vh;
+        }
+
+        .input-senha {
+            height: 6vh;
+            width: 35vh;
+        }
+
+        .texto-login {
+            font-size: 2em;
+        }
+
+        .botao-entrar {
+            padding: 10px 15px;
+            border-radius: 3vh;
+            margin-left: 5vh;
+            height: 3vh;
+        }
+
+        .botao-esqueci-senha {
+            margin-left: 0vh;
+        }
     }
 
 }
