@@ -103,7 +103,7 @@
     .botao-entrar{
         text-align: center;
     
-        font-family: Discord2;
+        font-family: Cambria;
     
         background-color: #EBEBEB;
         border-bottom: #EBEBEB;
@@ -120,6 +120,11 @@
     .botao-entrar:hover {
         background-color: #dfdfdf;
         transform: translatey(-3px);
+    }
+
+    .msg-erro {
+        color: rgb(248, 83, 83);
+        font-size: 13px;
     }
     
     .senha {
