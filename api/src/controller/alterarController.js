@@ -21,9 +21,15 @@ server.put('/produto/:id', async (req, resp) => {
 })
 
 server.get('/produto', async (req, resp) => {
+    try {
     const {nome} = req.query
     const resposta = await listarProduto(nome);
     resp.send(resposta);
+    } catch(err) {
+        resp.status(401).send({
+            erro: err.message
+        })
+    }
 })
 
 server.delete('/produto/:id', async (req, resp) => {

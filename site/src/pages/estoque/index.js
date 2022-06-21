@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './index.scss';
 import Logo from '../../assets/images/logo.jpg';
 import Lupa from '../../assets/images/lupa-removebg-preview.png';
@@ -29,11 +31,11 @@ export default function Index () {
                         </div>
 
                         <div class="container-tres-cards">
-                            <div class="container-card">
+                            <Link to='/registro' class="container-card">
 
-                                <a class="container-adicionar-produto" href="../registro"> <img src={ Mais } alt="mais" height="25px" width="25px"/><br/> <h3 class="texto-adicionar-produto"> Adicionar produto </h3> </a>
+                                <a class="container-adicionar-produto" href="#"> <img src={ Mais } alt="mais" height="25px" width="25px"/><br/> <h3 class="texto-adicionar-produto"> Adicionar produto </h3> </a>
 
-                            </div>
+                            </Link>
                             <div class="container-card">
 
                                 <img className='imagem-produto' src={ Xicara } alt="Xícara" />
