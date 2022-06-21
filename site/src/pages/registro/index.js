@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 import { cadastrarProduto } from '../../api/produtoApi';
 import storage from 'local-storage';
@@ -16,16 +17,20 @@ export default function Index () {
     const [capacidade, setCapacidade] = useState('');
     const [medidas, setMedidas] = useState('');
 
+    const navigate = useNavigate();
+
     async function publicarProduto() {
         try {
             const idadm = storage('adm-logado').id;
             const resposta = await cadastrarProduto(idadm, nome, preco, estoque, capacidade, cores, medidas);
             
             toast.dark('Produto cadastrado com sucesso!');
+            navigate('/estoque');
         } catch(err) {
             toast.error(err.response.data.erro);
         }
     }
+
 
     return(
         <main className = 'pagina-edicao'>
@@ -51,37 +56,37 @@ export default function Index () {
                         </div>
                     <div class="select">
                     <select className = 'numbers' name="qtd" value={estoque} onChange={e => setEstoque(e.target.value)} >
-                        <option value="" selected disabled>Selecione a quantidade</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                        <option value="">6</option>
-                        <option value="">7</option>
-                        <option value="">8</option>
-                        <option value="">9</option>
-                        <option value="">10</option>
-                        <option value="">11</option>
-                        <option value="">12</option>
-                        <option value="">13</option>
-                        <option value="">14</option>
-                        <option value="">15</option>
-                        <option value="">16</option>
-                        <option value="">17</option>
-                        <option value="">18</option>
-                        <option value="">19</option>
-                        <option value="">20</option>
-                        <option value="">21</option>
-                        <option value="">22</option>
-                        <option value="">23</option>
-                        <option value="">24</option>
-                        <option value="">25</option>
-                        <option value="">26</option>
-                        <option value="">27</option>
-                        <option value="">28</option>
-                        <option value="">29</option>
-                        <option value="">30</option>
+                        <option value='selected disabled'> Selecione a quantidade</option>
+                        <option >1</option>
+                        <option >2</option>
+                        <option >3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option >6</option>
+                        <option >7</option>
+                        <option >8</option>
+                        <option >9</option>
+                        <option >10</option>
+                        <option >11</option>
+                        <option >12</option>
+                        <option >13</option>
+                        <option >14</option>
+                        <option >15</option>
+                        <option >16</option>
+                        <option >17</option>
+                        <option >18</option>
+                        <option >19</option>
+                        <option >20</option>
+                        <option >21</option>
+                        <option >22</option>
+                        <option >23</option>
+                        <option >24</option>
+                        <option >25</option>
+                        <option >26</option>
+                        <option >27</option>
+                        <option >28</option>
+                        <option >29</option>
+                        <option >30</option>
                     </select>
                 </div>
                 </div>
@@ -92,16 +97,17 @@ export default function Index () {
                     <div className = 'select'>
                     <select className = 'cors' name="cores" value={cores} onChange={e => setCores(e.target.value)} >
                         <option value="" selected disabled> Selecione as cores</option>
-                        <option value="">Vermelho</option>
-                        <option value="">Laranja</option>
-                        <option value="">Amarelo</option>
-                        <option value="">Verde</option>
-                        <option value="">Azul</option>
-                        <option value="">Indigo</option>
-                        <option value="">Violeta</option>
-                        <option value="">Branco</option>
-                        <option value="">Rosa</option>
-                        <option value="">Preto</option>
+                        
+                        <option >Vermelho</option>
+                        <option >Laranja</option>
+                        <option >Amarelo</option>
+                        <option >Verde</option>
+                        <option >Azul</option>
+                        <option >Indigo</option>
+                        <option >Violeta</option>
+                        <option >Branco</option>
+                        <option >Rosa</option>
+                        <option >Preto</option>
                         </select> </div>
                     
                     

@@ -31,7 +31,7 @@ export default function Index () {
             </header>
 
 
-            <div>
+            <div className='margem-teste'>
 
                 <img className = 'cera' src={Cera} alt="Img inicial" />
 
