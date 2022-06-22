@@ -100,10 +100,12 @@
     .container-tres-cards {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
     
-        width: 84em;
+        width: 70em;
+        height: auto;
     }
     
     .container-card {

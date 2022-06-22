@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-import { cadastrarProduto, alterarProduto } from '../../api/produtoApi';
+import { cadastrarProduto, alterarProduto, buscaProdutoId } from '../../api/produtoApi';
 import storage from 'local-storage';
+
+import { useParams } from 'react-router-dom'
 
 import { toast } from 'react-toastify'
 
@@ -17,6 +19,25 @@ export default function Index () {
     const [capacidade, setCapacidade] = useState('');
     const [medidas, setMedidas] = useState('');
     const [id, setId] = useState(0);
+    
+    const { idParam } = useParams();
+
+    useEffect(() => {
+        if(idParam) {
+            carregarProduto();
+        }
+    }, [])
+
+    async function carregarProduto() {
+        const resposta = await buscaProdutoId(idParam);
+        setNome(resposta.nome);
+        setPreco(resposta.valor);
+        setEstoque(resposta.quantidade);
+        setCores(resposta.cores);
+        setCapacidade(resposta.capacidade);
+        setMedidas(resposta.medidas);
+        setId(resposta.id);
+        }
 
     const navigate = useNavigate();
 

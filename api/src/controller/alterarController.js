@@ -1,4 +1,4 @@
-import { alterarProduto, listarProduto, deletarProduto, todosProdutos } from "../repository/alterarRepository.js";
+import { alterarProduto, listarProduto, deletarProduto, todosProdutos, produtoPorId } from "../repository/alterarRepository.js";
 
 
 import { Router } from 'express';
@@ -23,6 +23,18 @@ server.put('/produto/:id', async (req, resp) => {
 server.get('/produto', async (req, resp) => {
     try {
         const resposta = await todosProdutos();
+        resp.send(resposta);
+    } catch(err) {
+        resp.status(401).send({
+            erro: err.message
+        })
+    }
+})
+
+server.get('/produto/esp/:id', async (req, resp) => {
+    try {
+        const { id } = req.params;
+        const resposta = await produtoPorId(id);
         resp.send(resposta);
     } catch(err) {
         resp.status(401).send({

@@ -44,3 +44,8 @@ export async function removerProduto(id) {
     const resposta = await api.delete(`/produto/${id}`);
     return resposta.status;
 }
+
+export async function buscaProdutoId(id) {
+    const resposta = await api.get(`/produto/esp/${id}`);
+    return resposta.data;
+}

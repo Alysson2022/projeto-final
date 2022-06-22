@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import { listarTodosProdutos, listarProdutoNome, removerProduto } from '../../api/produtoApi';
 
+import { confirmAlert } from 'react-confirm-alert'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
+
 import './index.scss';
 import Logo from '../../assets/images/logo.jpg';
 import Lupa from '../../assets/images/lupa-removebg-preview.png';
@@ -12,6 +16,37 @@ export default function Index () {
 
     const [produtos, setProdutos] = useState([]);
     const [filtro, setFiltro] = useState('');
+
+    const navigate = useNavigate();
+
+    function editarProduto(id) {
+        navigate(`/registro/alterar/${id}`);
+    }
+
+    async function deletarProdutoClick(id, nome) {
+
+        confirmAlert({
+            title: 'Remover produto',
+            message: `Deseja remover o produto ${nome}?`,
+            buttons: [
+                {
+                    label: 'Sim',
+                    onClick: async () => {
+                        const resposta = await removerProduto(id, nome);
+                        if(filtro === '')
+                            carregarTodosProdutos();
+                        else
+                            Filtrar();
+                        toast.dark('Produto removido!');
+                    }
+                },
+                {
+                    label: 'Não'
+                }
+            ]
+        })
+
+    }
 
     async function Filtrar() {
         const resposta = await listarProdutoNome(filtro);
@@ -53,126 +88,33 @@ export default function Index () {
                         </div>
 
                         <div class="container-tres-cards">
-                            <Link to='/registro' class="container-card">
-
-                                <a class="container-adicionar-produto" href="#"> <img src={ Mais } alt="mais" height="25px" width="25px"/><br/> <h3 class="texto-adicionar-produto"> Adicionar produto </h3> </a>
-
-                            </Link>
-
-                            <div class="container-card">
-
-                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-
-                            </div>
-                            <div class="container-card">
-                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container-tres-cards">
-                            <div class="container-card">
-
-                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-
-                            </div>
-                            <div class="container-card">
-
-                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-
-                            </div>
-                            <div class="container-card">
-                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container-tres-cards">
-                            <div class="container-card">
-
-                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-
-                            </div>
-                            <div class="container-card">
-
-                                <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                                <p>Xicara de chá de porcelana <br/> 
-                                    personalizada, 200ml</p>
-                                <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                                <p class="paragrafo-preco">R$ 0,00</p>
-
-                                <div class="container-botoes">
-                                    <a class="botao-edicao" href="../registro">Editar</a>
-                                    <a class="botao-excluir" href="../registro">Excluir</a>
-                                </div>
-
-                            </div>
-                            <div class="container-card">
                                 
-                            <img className='imagem-produto' src={ Xicara } alt="Xícara" />
-                            <p>Xicara de chá de porcelana <br/> 
-                                personalizada, 200ml</p>
-                            <p class="paragrafo-estoque">ESTOQUE: 50</p>
-                            <p class="paragrafo-preco">R$ 0,00</p>
 
-                            <div class="container-botoes">
-                                <a class="botao-edicao" href="../registro">Editar</a>
-                                <a class="botao-excluir" href="../registro">Excluir</a>
-                            </div>
+                                <Link to='/registro' class="container-card">
 
-                            </div>
+                                    <a class="container-adicionar-produto" href="#"> <img src={ Mais } alt="mais" height="25px" width="25px"/><br/> <h3 class="texto-adicionar-produto"> Adicionar produto </h3> </a>
+
+                                </Link>
+
+                                {produtos.map(item => 
+                                    
+
+                                        <div class="container-card" key={item.id}>
+
+                                            <img className='imagem-produto' src={ Xicara } alt="Xícara" />
+                                            <p>{item.nome}, <span>{item.capacidade}</span></p>
+                                            <p class="paragrafo-estoque">ESTOQUE: {item.quantidade}</p>
+                                            <p class="paragrafo-preco">R$ {item.valor}</p>
+
+                                            <div class="container-botoes">
+                                                <a class="botao-edicao" href="#" onClick={() => editarProduto(item.id)}>Editar</a>
+                                                <a class="botao-excluir" href="#" onClick={() => deletarProdutoClick(item.id, item.nome)}>Excluir</a>
+                                            </div>
+
+                                        </div>
+                                    
+                                )}
+
                         </div>
                     </section>
                 </div>
