@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 
-import { cadastrarProduto } from '../../api/produtoApi';
+import { cadastrarProduto, alterarProduto } from '../../api/produtoApi';
 import storage from 'local-storage';
 
 import { toast } from 'react-toastify'
@@ -16,19 +16,37 @@ export default function Index () {
     const [cores, setCores] = useState('');
     const [capacidade, setCapacidade] = useState('');
     const [medidas, setMedidas] = useState('');
+    const [id, setId] = useState(0);
 
     const navigate = useNavigate();
 
     async function publicarProduto() {
         try {
             const idadm = storage('adm-logado').id;
+
+            if(id === 0) {
             const resposta = await cadastrarProduto(idadm, nome, preco, estoque, capacidade, cores, medidas);
-            
+
+            setId(resposta.id);
             toast.dark('Produto cadastrado com sucesso!');
-            navigate('/estoque');
+            } else {
+                await alterarProduto(id, idadm, nome, preco, estoque, capacidade, cores, medidas);
+                toast.dark('Produto alterado com sucesso!');
+            }
+            
         } catch(err) {
             toast.error(err.response.data.erro);
         }
+    }
+
+    async function novoClick() {
+        setId(0);
+        setNome('');
+        setPreco('');
+        setEstoque(0);
+        setCores('');
+        setCapacidade('');
+        setMedidas('');
     }
 
 
@@ -124,7 +142,10 @@ export default function Index () {
                     </div>
 
                     
-                    <div className = 'publi' onClick={publicarProduto}><a href="#" className = 'publicar'>Publicar</a></div>
+                    <div className = 'publi'>
+                        <a href="#" className = 'publicar' onClick={publicarProduto}>{id === 0 ? 'Salvar' : 'Alterar'}</a> &nbsp; &nbsp;
+                        <a href="#" onClick={novoClick}>Novo</a>
+                    </div>
                 </main>
     
             </section>

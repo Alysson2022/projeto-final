@@ -39,3 +39,18 @@ export async function listarProduto(nome) {
     const [resposta] = await con.query(comando, [id]);
     return resposta.affectedRows;
 }
+
+export async function todosProdutos() {
+  const comando = 
+  `select id_produto			id,
+        nm_produto			nome,
+        vl_preco		    valor,
+        qtd_estoque     quantidade,
+        ds_capacidade	  capacidade,
+        ds_cores 			  cores,
+        ds_medidas			medidas
+   from tb_produto`
+
+  const [resposta] = await con.query(comando);
+  return resposta;
+}

@@ -1,12 +1,34 @@
 import { Link } from 'react-router-dom';
+import { listarTodosProdutos, listarProdutoNome, removerProduto } from '../../api/produtoApi';
 
 import './index.scss';
 import Logo from '../../assets/images/logo.jpg';
 import Lupa from '../../assets/images/lupa-removebg-preview.png';
 import Mais from '../../assets/images/WhatsApp_Image_2022-04-29_at_10.05.13-removebg-preview.png';
 import Xicara from '../../assets/images/xicara.webp';
+import { useEffect, useState } from 'react';
 
 export default function Index () {
+
+    const [produtos, setProdutos] = useState([]);
+    const [filtro, setFiltro] = useState('');
+
+    async function Filtrar() {
+        const resposta = await listarProdutoNome(filtro);
+        setProdutos(resposta);
+    }
+
+    async function carregarTodosProdutos() {
+        const resposta = await listarTodosProdutos();
+        console.log(resposta);
+        setProdutos(resposta);
+    }
+
+    useEffect(() => {
+        carregarTodosProdutos();
+    }, [])
+
+
     return (
         <main className='pagina-estoque'>
 
@@ -19,8 +41,8 @@ export default function Index () {
                                 <h2 className='texto-logo'>ArtMaac's Artesanato</h2>
 
                             <div class="container-texto-area">
-                                <input class="texto-area" type="text"/>
-                                <img src={ Lupa } alt="lupa" height="25px" width="25px" />
+                                <input class="texto-area" type="text" value={filtro} onChange={e => setFiltro(e.target.value)} />
+                                <img src={ Lupa } alt="lupa" height="25px" width="25px" onClick={Filtrar} />
                             </div>
                     </div>
 
@@ -36,6 +58,7 @@ export default function Index () {
                                 <a class="container-adicionar-produto" href="#"> <img src={ Mais } alt="mais" height="25px" width="25px"/><br/> <h3 class="texto-adicionar-produto"> Adicionar produto </h3> </a>
 
                             </Link>
+
                             <div class="container-card">
 
                                 <img className='imagem-produto' src={ Xicara } alt="Xícara" />
